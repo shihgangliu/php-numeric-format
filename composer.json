@@ -1,0 +1,24 @@
+{
+    "name": "leonliu/shihgangliu_asiayo",
+    "description": "This is my AsiaYo assignment.",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "authors": [
+        {
+            "name": "LeonLiu",
+            "email": "shihgangliu@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AsiaYo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
