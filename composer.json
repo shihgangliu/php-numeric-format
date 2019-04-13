@@ -1,6 +1,6 @@
 {
-    "name": "leonliu/shihgangliu_asiayo",
-    "description": "This is my AsiaYo assignment.",
+    "name": "leonliu/php-numeric-format",
+    "description": "This is my practice.",
     "type": "project",
     "require-dev": {
         "phpunit/phpunit": "^7.5"
