@@ -13,7 +13,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "AsiaYo\\": "src/"
+            "App\\": "src/"
         }
     },
     "autoload-dev": {

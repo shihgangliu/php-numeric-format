@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use AsiaYo\Helper;
+use App\Helper;
 use PHPUnit\Framework\TestCase;
 
 class HelperTest extends TestCase
