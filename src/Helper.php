@@ -4,6 +4,7 @@ namespace App;
 
 class Helper
 {
+    // 不用 php number_format 的方式
     public static function f($number): string
     {
         if (!is_numeric($number)) {
@@ -29,7 +30,8 @@ class Helper
     protected static function pushGroupToStack($number, array $stack = []): array
     {
         while ($number / 1000 >= 1) {
-            $fraction = $number - (int) $number;
+            // 避免用 $number - {(int) $number, floor($number)} 會不精確之情形
+            $fraction = '0.' . substr(strrchr((string )$number, '.'), 1);
             $remainder = $number % 1000;
             array_push($stack, $remainder + $fraction);
             $number = ($number - $remainder - $fraction) / 1000;
@@ -49,5 +51,20 @@ class Helper
         }
 
         return ltrim($result, ',');
+    }
+
+    public static function f2($number)
+    {
+        if (!is_numeric($number)) {
+            return "Input should be number type!";
+        }
+
+        if (is_int($number)) {
+            return number_format($number);
+        }
+
+        $fraction = substr(strrchr($number, '.'), 1);
+
+        return number_format($number, strlen($fraction), '.', ',');
     }
 }
